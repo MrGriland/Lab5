@@ -17,7 +17,7 @@ namespace Lab5
             Human human = new Human("Grisha", "Bulgak", 2002);
             human.Info();
             Engine engine1 = new Engine("diesel", 167, 7.1, 2.4);
-            Transformer transformer = new Transformer(4, 1500, 3.6, 250, 2016, "Range Rover", engine1);
+            Transformer transformer = new Transformer(4, 1700, 3.6, 250, 2016, "Range Rover", engine1);
             transformer.Info();
 
             if (transformer is Transport) Console.WriteLine("Объект transformer принадлежит классу Transport.\n");
@@ -32,8 +32,10 @@ namespace Lab5
 
             #region task_6
             Car car1 = new Car(4, 1222, 3.5, 210, 2004, "Volvo v60", new Engine("petrol", 320, 8, 3.2));
-            Transformer transformer1 = new Transformer(4, 1222, 3.5, 210, 2004, "Volvo v60", new Engine("petrol", 320, 8, 3.2));
+            Transformer transformer1 = new Transformer(4, 1222, 3.1, 230, 2018, "Volvo v40", new Engine("petrol", 320, 8.6, 3.0));
             Printer printer = new Printer();
+            ISmart transformer3 = new Transformer(4, 1400, 3.4, 214, 2013, "Toyota Corolla", new Engine("petrol", 190, 7, 1.8));
+            transformer3.Info();
             Transport[] transports = new Transport[] { car1, transformer1 };
             Console.WriteLine();
             foreach (var item in transports)
